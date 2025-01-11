@@ -1,9 +1,9 @@
 import java.util.HashMap;
 
 class bruteForce {
-    
+
     public void bruteForceApproach(int[] nums) {
-        
+
         HashMap<Integer, Integer> m = new HashMap<>();
 
         m.put(0, 0);
@@ -14,8 +14,7 @@ class bruteForce {
             m.put(nums[i], m.get(nums[i]) + 1);
         }
 
-
-        int index = 0; 
+        int index = 0;
         for (int colors = 0; colors < 3; colors++) {
             int feq = m.get(colors);
             for (int i = 0; i < feq; i++) {
