@@ -6,9 +6,9 @@ class optimized {
         int profit = 0, buy = 0, diff = 0;
 
         for (int i = 1; i < prices.length; i++) {
-            if (prices[i] < prices[buy]) {
+            if (prices[i] < prices[buy]) { //This is like finding the minimum value, so that we can buy at that price
                 buy = i;
-                continue;
+                continue; //This moves to the next loop, not including all the conditions
             }
             diff = prices[i] - prices[buy];
             if (diff > profit) {
