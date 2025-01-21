@@ -1,3 +1,5 @@
+//This is using Boyer Moore Majority Voting.
+
 public class optimized {
 
     public static int optimizedApproach(int[] nums) {
