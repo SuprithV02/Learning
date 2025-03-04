@@ -4,18 +4,17 @@ class optimized {
     public void optimizedApproach(int[][] matrix) {
         int col0 = 1;
         for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[0].length; j++) {
+            if (matrix[i][0] == 0)
+                col0 = 0;
+            for (int j = 1; j < matrix[0].length; j++) {
                 if (matrix[i][j] == 0) {
                     matrix[i][0] = 0;
+                    matrix[0][j] = 0;
 
-                    if (j == 0) {
-                        col0 = 0;
-                    } else {
-                        matrix[0][j] = 0;
-                    }
                 }
 
-                //we are not using the below code because, why to handle the first column separetely when we can combine in a single if
+                // we are not using the below code because, why to handle the first column
+                // separetely when we can combine in a single if
                 // if (matrix[i][0] == 0) {
                 // col0 = 0;
                 // }
