@@ -20,7 +20,7 @@ public class optimized {
             } else {
                 ans[index - 1][1] = Math.max(ans[index - 1][1], intervals[i][1]);
             }
-
+ 
         }
 
         return Arrays.copyOf(ans, index);
