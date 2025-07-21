@@ -49,7 +49,7 @@ public class optimized {
         int count = 0, countProfit = 0;
 
         for (int i = 0; i < n; i++) {
-            for (int j = arr[i].deadline; j > 0; j--) {
+            for (int j = arr[i].deadline; j > 0; j--) { //This is basically checking if there is a space before the deadline. if so we can add the id to that
                 if (hash[j] == -1) {
                     hash[j] = arr[i].id;
                     count++;

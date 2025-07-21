@@ -14,21 +14,21 @@ class meeting {
     }
 }
 
-class meetingComparator implements Comparator<meeting> {
+// class meetingComparator implements Comparator<meeting> {
 
-    @Override
-    public int compare(meeting o1, meeting o2) {
+// @Override
+// public int compare(meeting o1, meeting o2) {
 
-        if (o1.end > o2.end) {
-            return 1;
-        } else if (o1.end < o2.end) {
-            return -1;
-        } else if (o1.pos < o2.pos) {
-            return -1;
-        }
-        return 1;
-    }
-}
+// if (o1.end > o2.end) {
+// return 1;
+// } else if (o1.end < o2.end) {
+// return -1;
+// } else if (o1.pos < o2.pos) {
+// return -1;
+// }
+// return 1;
+// }
+// }
 
 public class optimized {
 
@@ -40,9 +40,8 @@ public class optimized {
             arr.add(new meeting(start[i], end[i], i + 1));
         }
 
-        meetingComparator meet = new meetingComparator();
-
-        Collections.sort(arr, meet);
+        // meetingComparator meet = new meetingComparator();
+        arr.sort(Comparator.comparingInt((meeting m) -> m.end).thenComparingInt(m -> m.pos));
 
         ArrayList<Integer> answer = new ArrayList<>();
 
